@@ -38,7 +38,7 @@ public enum DefaultNodes {
     TENZ("monero.10z.com.ar:18089/mainnet/10z.com.ar"),
     XMRROCKS("node.xmr.rocks:18089/mainnet/xmr.rocks"),
     xmrrocks("xqnnz2xmlmtpy2p4cm4cphg2elkwu5oob7b7so5v4wwgt44p6vbx5ryd.onion/mainnet/xmr.rocks.onion"),
-    XMRTW("opennode.xmr-tw.org:18089/mainnet/xmr-tw.org");
+    XMRTW("node1.xmr-tw.org:18081/mainnet/xmr-tw.org");
 
     private final String uri;
 }
