@@ -442,7 +442,7 @@ public class GenerateReviewFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        String type = getArguments().getString(REQUEST_TYPE); // intance variable <type> not set yet
+        String type = getArguments().getString(REQUEST_TYPE); // instance variable <type> not set yet
         if (GenerateReviewFragment.VIEW_TYPE_ACCEPT.equals(type)) {
             inflater.inflate(R.menu.wallet_details_help_menu, menu);
             super.onCreateOptionsMenu(menu, inflater);
@@ -659,7 +659,7 @@ public class GenerateReviewFragment extends Fragment {
         return (key != null) && (key.length() == 64)
                 && !key.equals("0000000000000000000000000000000000000000000000000000000000000000")
                 && !key.toLowerCase().equals("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        // ledger implmenetation returns the spend key as f's
+        // ledger implementation returns the spend key as f's
     }
 
     private class AsyncShowSeed extends AsyncTask<String, Void, Boolean> {

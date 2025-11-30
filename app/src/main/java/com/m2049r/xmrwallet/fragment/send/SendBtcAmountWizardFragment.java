@@ -272,7 +272,7 @@ public class SendBtcAmountWizardFragment extends SendWizardFragment implements P
     @Override
     public boolean isActive() {
         return true;
-    } // TODO Test what happens if we swtich away while querying
+    } // TODO Test what happens if we switch away while querying
 
     @Override
     public void showProgress() {

@@ -45,7 +45,7 @@ public interface WalletListener {
     void newBlock(long height);
 
     /**
-     * updated  - generic callback, called when any event (sent/received/block reveived/etc) happened with the wallet;
+     * updated  - generic callback, called when any event (sent/received/block received/etc) happened with the wallet;
      */
     void updated();
 

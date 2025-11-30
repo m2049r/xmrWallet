@@ -508,7 +508,7 @@ public class WalletService extends Service {
         showProgress(getString(R.string.status_wallet_connecting));
         showProgress(101);
         // if we try to refresh the history here we get occasional segfaults!
-        // doesnt matter since we update as soon as we get a new block anyway
+        // doesn't matter since we update as soon as we get a new block anyway
         Timber.d("start() done");
         return getWallet().getFullStatus();
     }

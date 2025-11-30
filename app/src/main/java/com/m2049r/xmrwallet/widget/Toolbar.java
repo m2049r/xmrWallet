@@ -79,7 +79,7 @@ public class Toolbar extends MaterialToolbar {
         super.onFinishInflate();
         toolbarImage = findViewById(R.id.toolbarImage);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
-            // the vector image does not work well for androis < Nougat
+            // the vector image does not work well for Android < Nougat
             toolbarImage.getLayoutParams().width = (int) getResources().getDimension(R.dimen.logo_width);
             toolbarImage.setImageResource(R.drawable.logo_horizontol_xmrujo);
         }
