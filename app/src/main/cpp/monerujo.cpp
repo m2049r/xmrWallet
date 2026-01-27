@@ -360,51 +360,127 @@ JNIEXPORT jlong JNICALL
 Java_com_m2049r_xmrwallet_model_WalletManager_createWalletJ(JNIEnv *env, jobject instance,
                                                             jstring path, jstring password,
                                                             jstring language, jint networkType) {
+    LOGD("createWalletJ: ENTER");
+    
     if (path == nullptr || password == nullptr || language == nullptr) {
+        LOGE("createWalletJ: null parameter detected");
         return 0;
     }
     
-    JNIStringGuard _path(env, path);
-    JNIStringGuard _password(env, password);
-    JNIStringGuard _language(env, language);
-    
-    if (!_path.isValid() || !_password.isValid() || !_language.isValid()) {
-        return 0;
-    }
+    // ✅ Create std::string copies first
+    std::string pathStr, passwordStr, languageStr;
+    {
+        JNIStringGuard _path(env, path);
+        JNIStringGuard _password(env, password);
+        JNIStringGuard _language(env, language);
+        
+        if (!_path.isValid() || !_password.isValid() || !_language.isValid()) {
+            LOGE("createWalletJ: failed to get string UTF chars");
+            return 0;
+        }
+        
+        try {
+            pathStr = _path.get();
+            passwordStr = _password.get();
+            languageStr = _language.get();
+            
+            LOGD("createWalletJ: successfully copied strings");
+        } catch (...) {
+            LOGE("createWalletJ: exception copying strings");
+            return 0;
+        }
+    } // Guards released here
     
     Monero::NetworkType _networkType = static_cast<Monero::NetworkType>(networkType);
 
-    Monero::Wallet *wallet = Monero::WalletManagerFactory::getWalletManager()->createWallet(
-            std::string(_path.get()), std::string(_password.get()), std::string(_language.get()), _networkType);
-
+    LOGD("createWalletJ: calling Monero::WalletManager::createWallet");
+    Monero::Wallet *wallet = nullptr;
     
-    logWalletCreation(wallet, "createWalletJ");  // ADDED: Log wallet creation
-return reinterpret_cast<jlong>(wallet);
+    try {
+        wallet = Monero::WalletManagerFactory::getWalletManager()->createWallet(
+            pathStr,
+            passwordStr,
+            languageStr,
+            _networkType
+        );
+    } catch (const std::exception& e) {
+        LOGE("createWalletJ: exception in createWallet: %s", e.what());
+        return 0;
+    } catch (...) {
+        LOGE("createWalletJ: unknown exception in createWallet");
+        return 0;
+    }
+    
+    if (wallet == nullptr) {
+        LOGE("createWalletJ: wallet creation returned null");
+        return 0;
+    }
+    
+    logWalletCreation(wallet, "createWalletJ");
+    
+    LOGD("createWalletJ: SUCCESS - wallet: %p", wallet);
+    return reinterpret_cast<jlong>(wallet);
 }
 
 JNIEXPORT jlong JNICALL
 Java_com_m2049r_xmrwallet_model_WalletManager_openWalletJ(JNIEnv *env, jobject instance,
                                                           jstring path, jstring password,
                                                           jint networkType) {
+    LOGD("openWalletJ: ENTER");
+    
     if (path == nullptr || password == nullptr) {
+        LOGE("openWalletJ: null parameter detected");
         return 0;
     }
     
-    JNIStringGuard _path(env, path);
-    JNIStringGuard _password(env, password);
-    
-    if (!_path.isValid() || !_password.isValid()) {
-        return 0;
+    std::string pathStr, passwordStr;
+    {
+        JNIStringGuard _path(env, path);
+        JNIStringGuard _password(env, password);
+        
+        if (!_path.isValid() || !_password.isValid()) {
+            LOGE("openWalletJ: failed to get string UTF chars");
+            return 0;
+        }
+        
+        try {
+            pathStr = _path.get();
+            passwordStr = _password.get();
+            LOGD("openWalletJ: successfully copied strings");
+        } catch (...) {
+            LOGE("openWalletJ: exception copying strings");
+            return 0;
+        }
     }
     
     Monero::NetworkType _networkType = static_cast<Monero::NetworkType>(networkType);
 
-    Monero::Wallet *wallet = Monero::WalletManagerFactory::getWalletManager()->openWallet(
-            std::string(_path.get()), std::string(_password.get()), _networkType);
-
+    LOGD("openWalletJ: calling Monero::WalletManager::openWallet");
+    Monero::Wallet *wallet = nullptr;
     
-    logWalletCreation(wallet, "openWalletJ");  // ADDED: Log wallet creation
-return reinterpret_cast<jlong>(wallet);
+    try {
+        wallet = Monero::WalletManagerFactory::getWalletManager()->openWallet(
+            pathStr,
+            passwordStr,
+            _networkType
+        );
+    } catch (const std::exception& e) {
+        LOGE("openWalletJ: exception in openWallet: %s", e.what());
+        return 0;
+    } catch (...) {
+        LOGE("openWalletJ: unknown exception in openWallet");
+        return 0;
+    }
+    
+    if (wallet == nullptr) {
+        LOGE("openWalletJ: wallet opening returned null");
+        return 0;
+    }
+    
+    logWalletCreation(wallet, "openWalletJ");
+    
+    LOGD("openWalletJ: SUCCESS - wallet: %p", wallet);
+    return reinterpret_cast<jlong>(wallet);
 }
 
 JNIEXPORT jlong JNICALL
@@ -412,28 +488,79 @@ Java_com_m2049r_xmrwallet_model_WalletManager_recoveryWalletJ(JNIEnv *env, jobje
                                                               jstring path, jstring password,
                                                               jstring mnemonic, jstring offset,
                                                               jint networkType, jlong restoreHeight) {
+    LOGD("recoveryWalletJ: ENTER");
+    
+    // ✅ FIX: Validate parameters FIRST
     if (path == nullptr || password == nullptr || mnemonic == nullptr || offset == nullptr) {
+        LOGE("recoveryWalletJ: null parameter detected");
         return 0;
     }
     
-    JNIStringGuard _path(env, path);
-    JNIStringGuard _password(env, password);
-    JNIStringGuard _mnemonic(env, mnemonic);
-    JNIStringGuard _offset(env, offset);
-    
-    if (!_path.isValid() || !_password.isValid() || !_mnemonic.isValid() || !_offset.isValid()) {
-        return 0;
-    }
+    // ✅ FIX: Create std::string copies FIRST, in a separate scope
+    std::string pathStr, passwordStr, mnemonicStr, offsetStr;
+    {
+        JNIStringGuard _path(env, path);
+        JNIStringGuard _password(env, password);
+        JNIStringGuard _mnemonic(env, mnemonic);
+        JNIStringGuard _offset(env, offset);
+        
+        // ✅ FIX: Validate all guards
+        if (!_path.isValid() || !_password.isValid() || !_mnemonic.isValid() || !_offset.isValid()) {
+            LOGE("recoveryWalletJ: failed to get string UTF chars");
+            return 0;
+        }
+        
+        // ✅ FIX: Copy to std::string while guards are still valid
+        try {
+            pathStr = _path.get();
+            passwordStr = _password.get();
+            mnemonicStr = _mnemonic.get();
+            offsetStr = _offset.get();
+            
+            LOGD("recoveryWalletJ: successfully copied strings - path: %s, mnemonic length: %zu", 
+                 pathStr.c_str(), mnemonicStr.length());
+        } catch (const std::exception& e) {
+            LOGE("recoveryWalletJ: exception copying strings: %s", e.what());
+            return 0;
+        } catch (...) {
+            LOGE("recoveryWalletJ: unknown exception copying strings");
+            return 0;
+        }
+    } // ✅ Guards released here - JNI strings properly cleaned up
     
     Monero::NetworkType _networkType = static_cast<Monero::NetworkType>(networkType);
 
-    Monero::Wallet *wallet = Monero::WalletManagerFactory::getWalletManager()->recoveryWallet(
-            std::string(_path.get()), std::string(_password.get()), std::string(_mnemonic.get()), _networkType,
-            (uint64_t) restoreHeight, 1, std::string(_offset.get()));
-
+    // ✅ FIX: Now use the std::string copies - NO JNI references involved
+    LOGD("recoveryWalletJ: calling Monero::WalletManager::recoveryWallet");
+    Monero::Wallet *wallet = nullptr;
     
-    logWalletCreation(wallet, "recoveryWalletJ");  // ADDED: Log wallet creation
-return reinterpret_cast<jlong>(wallet);
+    try {
+        wallet = Monero::WalletManagerFactory::getWalletManager()->recoveryWallet(
+            pathStr,           // ✅ std::string - safe
+            passwordStr,       // ✅ std::string - safe
+            mnemonicStr,       // ✅ std::string - safe
+            _networkType,
+            (uint64_t) restoreHeight,
+            1,
+            offsetStr          // ✅ std::string - safe
+        );
+    } catch (const std::exception& e) {
+        LOGE("recoveryWalletJ: exception in recoveryWallet: %s", e.what());
+        return 0;
+    } catch (...) {
+        LOGE("recoveryWalletJ: unknown exception in recoveryWallet");
+        return 0;
+    }
+    
+    if (wallet == nullptr) {
+        LOGE("recoveryWalletJ: wallet creation returned null");
+        return 0;
+    }
+    
+    logWalletCreation(wallet, "recoveryWalletJ");
+    
+    LOGD("recoveryWalletJ: SUCCESS - wallet: %p", wallet);
+    return reinterpret_cast<jlong>(wallet);
 }
 
 JNIEXPORT jlong JNICALL
@@ -442,33 +569,76 @@ Java_com_m2049r_xmrwallet_model_WalletManager_createWalletFromKeysJ(JNIEnv *env,
                                                                     jstring language, jint networkType,
                                                                     jlong restoreHeight, jstring addressString,
                                                                     jstring viewKeyString, jstring spendKeyString) {
+    LOGD("createWalletFromKeysJ: ENTER");
+    
     if (path == nullptr || password == nullptr || language == nullptr || 
         addressString == nullptr || viewKeyString == nullptr || spendKeyString == nullptr) {
+        LOGE("createWalletFromKeysJ: null parameter detected");
         return 0;
     }
     
-    JNIStringGuard _path(env, path);
-    JNIStringGuard _password(env, password);
-    JNIStringGuard _language(env, language);
-    JNIStringGuard _addressString(env, addressString);
-    JNIStringGuard _viewKeyString(env, viewKeyString);
-    JNIStringGuard _spendKeyString(env, spendKeyString);
-    
-    if (!_path.isValid() || !_password.isValid() || !_language.isValid() ||
-        !_addressString.isValid() || !_viewKeyString.isValid() || !_spendKeyString.isValid()) {
-        return 0;
+    std::string pathStr, passwordStr, languageStr, addressStr, viewKeyStr, spendKeyStr;
+    {
+        JNIStringGuard _path(env, path);
+        JNIStringGuard _password(env, password);
+        JNIStringGuard _language(env, language);
+        JNIStringGuard _addressString(env, addressString);
+        JNIStringGuard _viewKeyString(env, viewKeyString);
+        JNIStringGuard _spendKeyString(env, spendKeyString);
+        
+        if (!_path.isValid() || !_password.isValid() || !_language.isValid() ||
+            !_addressString.isValid() || !_viewKeyString.isValid() || !_spendKeyString.isValid()) {
+            LOGE("createWalletFromKeysJ: failed to get string UTF chars");
+            return 0;
+        }
+        
+        try {
+            pathStr = _path.get();
+            passwordStr = _password.get();
+            languageStr = _language.get();
+            addressStr = _addressString.get();
+            viewKeyStr = _viewKeyString.get();
+            spendKeyStr = _spendKeyString.get();
+            LOGD("createWalletFromKeysJ: successfully copied strings");
+        } catch (...) {
+            LOGE("createWalletFromKeysJ: exception copying strings");
+            return 0;
+        }
     }
     
     Monero::NetworkType _networkType = static_cast<Monero::NetworkType>(networkType);
 
-    Monero::Wallet *wallet = Monero::WalletManagerFactory::getWalletManager()->createWalletFromKeys(
-            std::string(_path.get()), std::string(_password.get()), std::string(_language.get()), _networkType,
-            (uint64_t) restoreHeight, std::string(_addressString.get()), std::string(_viewKeyString.get()),
-            std::string(_spendKeyString.get()));
-
+    LOGD("createWalletFromKeysJ: calling Monero::WalletManager::createWalletFromKeys");
+    Monero::Wallet *wallet = nullptr;
     
-    logWalletCreation(wallet, "createWalletFromKeysJ");  // ADDED: Log wallet creation
-return reinterpret_cast<jlong>(wallet);
+    try {
+        wallet = Monero::WalletManagerFactory::getWalletManager()->createWalletFromKeys(
+            pathStr,
+            passwordStr,
+            languageStr,
+            _networkType,
+            (uint64_t) restoreHeight,
+            addressStr,
+            viewKeyStr,
+            spendKeyStr
+        );
+    } catch (const std::exception& e) {
+        LOGE("createWalletFromKeysJ: exception: %s", e.what());
+        return 0;
+    } catch (...) {
+        LOGE("createWalletFromKeysJ: unknown exception");
+        return 0;
+    }
+    
+    if (wallet == nullptr) {
+        LOGE("createWalletFromKeysJ: wallet creation returned null");
+        return 0;
+    }
+    
+    logWalletCreation(wallet, "createWalletFromKeysJ");
+    
+    LOGD("createWalletFromKeysJ: SUCCESS - wallet: %p", wallet);
+    return reinterpret_cast<jlong>(wallet);
 }
 
 JNIEXPORT jlong JNICALL
@@ -476,28 +646,68 @@ Java_com_m2049r_xmrwallet_model_WalletManager_createWalletFromDeviceJ(JNIEnv *en
                                                                       jstring path, jstring password,
                                                                       jstring deviceName, jint networkType,
                                                                       jlong restoreHeight, jstring subaddressLookahead) {
+    LOGD("createWalletFromDeviceJ: ENTER");
+    
     if (path == nullptr || password == nullptr || deviceName == nullptr || subaddressLookahead == nullptr) {
+        LOGE("createWalletFromDeviceJ: null parameter detected");
         return 0;
     }
     
-    JNIStringGuard _path(env, path);
-    JNIStringGuard _password(env, password);
-    JNIStringGuard _deviceName(env, deviceName);
-    JNIStringGuard _subaddressLookahead(env, subaddressLookahead);
-    
-    if (!_path.isValid() || !_password.isValid() || !_deviceName.isValid() || !_subaddressLookahead.isValid()) {
-        return 0;
+    std::string pathStr, passwordStr, deviceNameStr, subaddressLookaheadStr;
+    {
+        JNIStringGuard _path(env, path);
+        JNIStringGuard _password(env, password);
+        JNIStringGuard _deviceName(env, deviceName);
+        JNIStringGuard _subaddressLookahead(env, subaddressLookahead);
+        
+        if (!_path.isValid() || !_password.isValid() || !_deviceName.isValid() || !_subaddressLookahead.isValid()) {
+            LOGE("createWalletFromDeviceJ: failed to get string UTF chars");
+            return 0;
+        }
+        
+        try {
+            pathStr = _path.get();
+            passwordStr = _password.get();
+            deviceNameStr = _deviceName.get();
+            subaddressLookaheadStr = _subaddressLookahead.get();
+            LOGD("createWalletFromDeviceJ: successfully copied strings");
+        } catch (...) {
+            LOGE("createWalletFromDeviceJ: exception copying strings");
+            return 0;
+        }
     }
     
     Monero::NetworkType _networkType = static_cast<Monero::NetworkType>(networkType);
 
-    Monero::Wallet *wallet = Monero::WalletManagerFactory::getWalletManager()->createWalletFromDevice(
-            std::string(_path.get()), std::string(_password.get()), _networkType, std::string(_deviceName.get()),
-            (uint64_t) restoreHeight, std::string(_subaddressLookahead.get()));
-
+    LOGD("createWalletFromDeviceJ: calling Monero::WalletManager::createWalletFromDevice");
+    Monero::Wallet *wallet = nullptr;
     
-    logWalletCreation(wallet, "createWalletFromDeviceJ");  // ADDED: Log wallet creation
-return reinterpret_cast<jlong>(wallet);
+    try {
+        wallet = Monero::WalletManagerFactory::getWalletManager()->createWalletFromDevice(
+            pathStr,
+            passwordStr,
+            _networkType,
+            deviceNameStr,
+            (uint64_t) restoreHeight,
+            subaddressLookaheadStr
+        );
+    } catch (const std::exception& e) {
+        LOGE("createWalletFromDeviceJ: exception: %s", e.what());
+        return 0;
+    } catch (...) {
+        LOGE("createWalletFromDeviceJ: unknown exception");
+        return 0;
+    }
+    
+    if (wallet == nullptr) {
+        LOGE("createWalletFromDeviceJ: wallet creation returned null");
+        return 0;
+    }
+    
+    logWalletCreation(wallet, "createWalletFromDeviceJ");
+    
+    LOGD("createWalletFromDeviceJ: SUCCESS - wallet: %p", wallet);
+    return reinterpret_cast<jlong>(wallet);
 }
 
 JNIEXPORT jboolean JNICALL
