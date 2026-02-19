@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_create_new"><![CDATA[
+        <h1>Buat Wallet - Baru</h1>
+        <p>Jika Anda memerlukan Alamat Monero baru!</p>
+        <p>Masukkan nama wallet yang unik dan kata sandi.
+        Kata sandi digunakan untuk mengamankan data wallet Anda di perangkat. Gunakan kata sandi yang kuat -
+        atau lebih baik lagi gunakan frasa sandi.</p>
+        <h2>Catat Mnemonic Seed Anda!</h2>
+        <p>Pada layar berikutnya Anda akan menemukan \"Mnemonic Seed\" 25 kata Anda.
+        Ini adalah satu-satunya data yang diperlukan untuk memulihkan wallet Anda di kemudian hari
+        dan mendapatkan akses penuh ke dana Anda.
+        Menjaganya tetap aman dan privat sangatlah penting, karena ini memberikan <em>siapa pun</em>
+        akses penuh ke dana Anda!</p>
+        <p>Jika Anda kehilangan kata sandi wallet, Anda tetap dapat memulihkan wallet dengan Mnemonic Seed.</p>
+        <p>Tidak ada cara untuk memulihkan Mnemonic Seed Anda. Jika Anda kehilangannya, seluruh dana Anda akan hilang!
+        Mnemonic Seed juga tidak pernah dapat diubah, dan jika dicuri atau dikompromikan,
+        Anda harus memindahkan dana Anda ke wallet baru (dengan Mnemonic Seed baru). Oleh karena itu, sebaiknya
+        Anda mencadangkan Mnemonic Seed dengan menuliskannya dan menyimpannya di <em>beberapa</em> tempat yang aman
+        dan terlindungi.</p>
+    ]]></string>
+    <string name="help_create_seed"><![CDATA[
+        <h1>Buat Wallet - Seed</h1>
+        <p>Jika Anda sudah memiliki Alamat Monero dan ingin memulihkan transaksi dari blockchain!</p>
+        <p>Masukkan nama wallet yang unik dan kata sandi. Kata sandi digunakan untuk mengamankan data wallet Anda di perangkat.
+        Gunakan kata sandi yang kuat - atau lebih baik lagi gunakan frasa sandi.</p>
+        <p>Masukkan Seed Anda pada kolom \"Mnemonic Seed\".<p>
+        <p>Masukkan nomor blok dari transaksi pertama yang digunakan untuk alamat ini pada
+        kolom \"Restore Height\". Anda juga dapat menggunakan tanggal dengan format YYYY-MM-DD. Jika Anda tidak yakin,
+        masukkan perkiraan tanggal/blockheight <em>sebelum</em> Anda pertama kali menggunakan alamat wallet ini.</p>
+    ]]></string>
+    <string name="help_create_ledger"><![CDATA[
+        <h1>Buat Dompet - Ledger</h1>
+        <p>Anda ingin memulihkan dompet dari perangkat Ledger Nano S Anda.</p>
+        <p>Kunci rahasia Anda tidak pernah meninggalkan perangkat Ledger, sehingga perangkat tersebut harus tetap terhubung setiap
+        kali Anda ingin mengakses dompet Anda.</p>
+        <p>Masukkan nama dompet yang unik dan kata sandi. Kata sandi digunakan untuk mengamankan data dompet Anda pada perangkat
+        Android ini. Gunakan kata sandi yang kuat - akan lebih baik jika menggunakan frasa sandi (passphrase).</p>
+        <p>Masukkan nomor blok dari transaksi pertama yang dilakukan pada alamat ini di dalam
+        kolom \"Restore Height\". Anda juga dapat menggunakan tanggal dengan format YYYY-MM-DD. Jika Anda tidak yakin,
+        masukkan perkiraan tanggal atau tinggi blok (blockheight) <em>sebelum</em> Anda pertama kali menggunakan alamat dompet ini.</p>
+    ]]></string>
+    <string name="help_create_keys"><![CDATA[
+        <h1>Buat Dompet - Kunci</h1>
+        <p>Jika Anda memulihkan dompet menggunakan kunci Anda!</p>
+        <p>Masukkan nama dompet yang unik dan kata sandi. Kata sandi digunakan untuk mengamankan data dompet Anda di perangkat ini.
+        Gunakan kata sandi yang kuat - akan lebih baik jika menggunakan frasa sandi (passphrase).<p>
+        <p>Masukkan Alamat Monero Anda pada kolom \"Public Address\" dan isi kolom \"View Key\" serta \"Spend Key\".</p>
+        <p>Masukkan nomor blok dari transaksi pertama yang dilakukan pada alamat ini di dalam
+        kolom \"Restore Height\". Anda juga dapat menggunakan tanggal dengan format YYYY-MM-DD. Jika Anda tidak yakin,
+        masukkan perkiraan tanggal atau tinggi blok (blockheight) <em>sebelum</em> Anda pertama kali menggunakan alamat dompet ini.</p>
+    ]]></string>
+    <string name="help_create_view"><![CDATA[
+        <h1>Buat Dompet - Pantau</h1>
+        <p>Jika Anda hanya ingin memantau transaksi masuk ke sebuah dompet!</p>
+        <p>Masukkan nama dompet yang unik dan kata sandi. Kata sandi digunakan untuk mengamankan data dompet Anda di perangkat ini.
+        Gunakan kata sandi yang kuat - akan lebih baik jika menggunakan frasa sandi (passphrase).<p>
+        <p>Masukkan Alamat Monero Anda pada kolom \"Public Address\" dan isi kolom \"View Key\".</p>
+        <p>Masukkan nomor blok dari transaksi pertama yang dilakukan pada alamat ini di dalam
+        kolom \"Restore Height\". Anda juga dapat menggunakan tanggal dengan format YYYY-MM-DD. Jika Anda tidak yakin,
+        masukkan perkiraan tanggal atau tinggi blok (blockheight) <em>sebelum</em> Anda pertama kali menggunakan alamat dompet ini.</p>
+    ]]></string>
+    <string name="help_details"><![CDATA[
+        <h1>Detail Dompet</h1>
+        <h2>Alamat Publik</h2>
+        Alamat publik Anda serupa dengan nomor rekening bank; Anda dapat membagikannya kepada siapa pun tanpa
+        perlu khawatir kehilangan Monero Anda. Orang lain akan mengirimkan Monero ke dompet Anda menggunakan alamat ini.
+        <h2>Mnemonic Seed</h2>
+        Ini adalah satu-satunya data yang diperlukan untuk memulihkan dompet Anda di kemudian hari dan mendapatkan akses penuh ke
+        dana Anda. Menjaga kerahasiaan dan keamanan data ini sangatlah penting, karena data ini memberikan <em>siapa pun</em> akses
+        penuh ke Monero Anda! Jika Anda belum mencatatnya di tempat yang aman, harap segera lakukan!
+        <h2>Kata Sandi Pemulihan Berkas Dompet</h2>
+        Pastikan Anda mencatat kata sandi ini. Jika Anda menyetel ulang perangkat atau menghapus instalan aplikasi, Anda
+        akan memerlukannya untuk mengakses kembali dompet Anda.<br/>
+        <h3>CrAzYpass</h3>
+        Jika kata sandi yang ditampilkan di sini terdiri dari 52 karakter alfanumerik dalam kelompok beranggotakan 4 karakter - selamat!
+        Berkas dompet Anda diamankan dengan kunci 256-bit yang dihasilkan oleh fitur keamanan perangkat Anda
+        berdasarkan frasa sandi yang Anda pilih (saat pembuatan atau dengan mengubahnya). Hal ini membuatnya
+        sangat sulit untuk diretas!<br/>
+        Fitur ini wajib untuk semua dompet yang baru dibuat.
+        <h3>Kata Sandi Warisan (Legacy)</h3>
+        Jika Anda melihat frasa sandi Anda di sini, berkas dompet Anda tidak seaman saat menggunakan
+        CrAzYpass. Untuk memperbaikinya, cukup pilih \"Ubah Frasa Sandi\" dari menu. Setelah memasukkan
+        frasa sandi baru (bahkan boleh menggunakan yang sama seperti sebelumnya), aplikasi akan membuatkan CrAzYpass untuk
+        Anda dan menggunakannya untuk mengamankan berkas dompet Anda. Catat kata sandi tersebut!
+        <h3>Dompet CrAzYpass</h3>
+        Jika suatu saat Anda perlu menginstal ulang Monerujo (misalnya setelah menyetel ulang ponsel atau beralih
+        ke perangkat baru) atau Anda ingin menggunakan berkas dompet Anda di perangkat atau PC lain, Anda harus
+        menggunakan Kata Sandi Pemulihan ini agar dapat mengakses dompet Anda kembali.<br/>
+        Dengan memilih \"Ubah Frasa Sandi\" dari menu, Anda dapat memilih frasa sandi lainnya. Harap diperhatikan
+        bahwa hal ini akan menghasilkan Kata Sandi Pemulihan yang baru. Catat kata sandi tersebut!
+        <h2>View Key</h2>
+        View key Anda dapat digunakan untuk memantau transaksi masuk ke dompet Anda tanpa memberikan
+        izin untuk membelanjakan dana yang ada di dalam dompet Anda.
+        <h2>Spend Key</h2>
+        Spend key Anda memungkinkan siapa pun untuk membelanjakan Monero yang terkait dengan dompet Anda, jadi jangan beritahukan
+        kunci ini kepada siapa pun, jaga keamanannya seperti Mnemonic Seed Anda.
+    ]]></string>
+    <string name="help_list"><![CDATA[
+        <h1>Daftar Dompet</h1>
+        <h2>Node</h2>
+        <p>Monerujo menggunakan Remote Node untuk berkomunikasi dengan Jaringan Monero tanpa harus
+        mengunduh dan menyimpan salinan seluruh blockchain itu sendiri. Anda dapat menemukan daftar remote node
+        populer atau mempelajari cara menjalankan remote node Anda sendiri di sini: https://moneroworld.com/<p>
+        <p>Monerujo dilengkapi dengan beberapa pengaturan awal Remote Node. Aplikasi ini akan mengingat lima node terakhir yang digunakan.</p>
+        <h2>Dompet</h2>
+        <p>Di sini Anda dapat melihat dompet-dompet Anda. Berkas tersebut terletak di folder <tt>monerujo</tt>
+        pada penyimpanan internal perangkat Anda. Anda dapat menggunakan aplikasi penjelajah berkas untuk melihatnya.
+        Anda sebaiknya membuat cadangan folder ini secara berkala ke penyimpanan di luar perangkat untuk mengantisipasi
+        jika perangkat Anda rusak atau dicuri.</p>
+        <p>Pilih dompet untuk membukanya atau tekan tanda \"+\" untuk membuat dompet baru.
+        Atau pilih salah satu dari operasi dompet berikut:</p>
+        <h3>Detail</h3>
+        <p>Menampilkan detail dompet, seed &amp; kunci.</p>
+        <h3>Terima</h3>
+        <p>Membuat kode QR untuk menerima Moneroj.</p>
+        <h3>Ubah Nama</h3>
+        <p>Mengubah nama dompet. Nama pada berkas cadangan (backup) tidak akan ikut berubah.</p>
+        <h3>Cadangkan (Backup)</h3>
+        <p>Membuat salinan dompet di dalam folder <tt>backups</tt> di dalam folder <tt>monerujo</tt>
+        dan menimpa salinan sebelumnya yang ada di sana.</p>
+        <h3>Arsip</h3>
+        <p>Membuat cadangan dan menghapus dompet setelahnya. Salinannya akan tetap berada di folder <tt>backups</tt>.
+        Jika Anda tidak lagi membutuhkan cadangan tersebut, Anda sebaiknya menghapusnya menggunakan penjelajah berkas atau
+        aplikasi penghapus berkas yang aman.</p>
+    ]]></string>
+    <string name="help_tx_details"><![CDATA[
+        <h1>Detail Transaksi</h1>
+        <h2>Tujuan</h2>
+        Ini adalah alamat publik wallet tujuan pengiriman Monero lu
+        <h2>PaymentID</h2>
+        Lu bisa pakai Payment ID buat nandaian alasan pengiriman Monero antar dua pihak, ini
+        sepenuhnya opsional dan privat. Contohnya, ini bisa bantu Bisnis buat nyocokin transaksi lu
+        sama barang yang lu beli.
+        <h2>TX ID</h2>
+        Ini adalah ID Transaksi lu, bisa dipakai buat nyari transaksi lu yang terenkripsi di Monero
+        Blockchain explorer kayak <a href="https://xmrchain.net/">https://xmrchain.net/</a>
+        <h2>TX KEY (Kunci Transaksi)</h2>
+        Ini adalah kunci privat transaksi lu, simpen baik-baik karena kalau dikasih tahu ke pihak ketiga,
+        bakal ketahuan tanda tangan mana dalam ring yang punya lu, dan bikin transaksi lu jadi transparan.
+        <h2>Blok</h2>
+        Ini adalah blok tempat transaksi lu dimasukkan.
+    ]]></string>
+    <string name="help_send"><![CDATA[
+        <h1>Kirim</h1>
+        <h2>Alamat penerima</h2>
+        <p>Ini adalah alamat publik wallet tujuan pengiriman, lu bisa paste dari
+        clipboard, scan QR code, atau masukin manual. Pastikan lu cek sampai tiga kali
+        supaya gak salah kirim ke alamat yang keliru, karena kalau sudah terkirim gak bisa dibatalkan.</p>
+        <p>Selain pakai alamat XMR, lu juga bisa pakai
+        <ul>
+            <li>Sebuah <a href="https://openalias.org/">OpenAlias</a> untuk XMR atau BTC</li>
+            <li>Alamat kripto lain</li>
+        </u>
+		</p>
+        <h2>Konversi XMR</h2>
+        <p>Konversi ke kripto lain diproses melalui layanan exchange eksternal. Monerujo tidak menjalankan atau berafiliasi dengan pihak ketiga tersebut, jadi tidak bisa membantu terkait layanan mereka, tapi akan menyediakan informasi yang dibutuhkan untuk menghubungi dukungan mereka.</p>
+		<p>Cukup tambahkan alamat yang sesuai atau pilih koin yang diinginkan dengan mengetuk ikonnya.</p>
+    ]]></string>
+    <string name="help_xmrto"><![CDATA[
+        <h1>Mengonversi XMR</h1>
+        <h2>Jumlah<h2>
+        <p>Masukkan di kolom \"Jumlah\" nominal kripto yang ingin lu kirim. Secara default, bakal ditampilin jumlah XMR yang setara yang bakal dikirim dari wallet lu. Lu bisa pilih mata uang lain dari dropdown kalau mau ngunci nominal di mata uang itu. Monerujo pakai kurs tetap, jadi di akhir proses lu harusnya dapet jumlah yang persis sama seperti yang lu tentuin di sini.</p>
+		<h2>Kurs</h2>
+        <p>Di bawah ini lu bakal lihat kurs saat ini yang dikasih sama exchange, lengkap dengan batas minimum dan maksimumnya. Perlu dicatat, kurs ini belum dijamin di tahap ini, kurs bakal dikunci pas transaksi lu siap buat disetujui di layar berikutnya.</p>
+	]]></string>
+    <string name="help_wallet"><![CDATA[
+        <h1>Wallet</h1>
+        <h2>Mode Street</h2>
+        <p>Mode Street dapat diaktifkan/dinonaktifkan melalui menu atau ikon kepala Gunther. Dalam mode ini,
+        saldo Anda tidak ditampilkan di layar mana pun sehingga Anda dapat menggunakan wallet dengan aman di jalan, pub, atau
+        tempat umum lainnya. Transaksi sebelumnya juga disembunyikan. Transaksi baru tetap akan ditampilkan,
+        sehingga Anda dapat melihat bahwa Anda telah mengirim/menerima sweet Moneroj!</p>
+        <h2>Pemindaian</h2>
+        Karena Monero menjaga privasi, setiap kali Anda membuka wallet Monerujo kami harus
+        memindai blockchain untuk melihat apakah ada Moneroj baru yang telah dikirim ke wallet Anda. Proses ini hanya
+        menyimpan informasi di ponsel Anda yang memang terkait dengan wallet Anda. Terkadang proses ini dapat memakan waktu
+        karena Anda belum melakukan sinkronisasi dalam waktu yang lama.
+        <h2>Saldo</h2>
+        <p><b>Bantuan! Saldo wallet saya hilang atau belum terkonfirmasi!</b><br/>
+        Jangan panik! Saat Anda mengirim dana dari wallet, sebagian saldo Anda akan sementara ditampilkan
+        sebagai belum terkonfirmasi.
+        Hal ini terjadi sebagai akibat dari cara Monero diproses di blockchain dan cara kerja kembalian (change).
+        Baca selengkapnya tentang change di https://getmonero.org/resources/moneropedia/change.html
+        <h2>Daftar Transaksi</h2>
+        <p>Daftar transaksi wallet. Pada wallet view-only, hanya transaksi masuk yang ditampilkan.</p>
+    ]]></string>
+    <string name="help_node"><![CDATA[
+        <h1>Node</h1>
+        <h2>Singkatnya</h2>
+        <p>Segarkan daftar node dengan menarik layar ke bawah &amp; tandai 3&#8211;5 node sebagai bookmark agar Monerujo
+        dapat memilih yang terbaik untuk Anda!</p>
+        <h2>Apa itu Node?</h2>
+        <p>Monerujo menggunakan Remote Node (kadang juga disebut Daemon) untuk berkomunikasi dengan
+        Jaringan Monero tanpa harus mengunduh dan menyimpan salinan
+        seluruh blockchain.<p>
+        <h2>Daftar Node</h2>
+        <p>Jika daftar kosong, Anda dapat menambahkan node baru secara manual atau membiarkan Monerujo
+        memindai jaringan untuk Anda. Atau keduanya. Lanjutkan membaca&#8230;</p>
+        <p>Daftar node menampilkan semua node yang saat ini diketahui. Selain itu, cap waktu
+        dari blok terbaru yang diketahui setiap node ditampilkan di bawah nama node. Sebuah ikon
+        yang merepresentasikan perilaku respons node
+        (yang menunjukkan tingkat konektivitas yang dapat diharapkan)
+        ditampilkan di samping setiap node.</p>
+        <p>Setiap node dalam daftar dapat ditandai sebagai bookmark untuk digunakan nanti.
+        Node yang tidak ditandai sebagai bookmark akan dilupakan.<p>
+        <p>Monerujo akan memilih node yang paling optimal dari daftar bookmark setiap kali digunakan.
+        Hal ini dilakukan dengan memeriksa blockheight (seberapa mutakhir
+        node tersebut?) serta perilaku respons (seberapa cepat node merespons permintaan?).</p>
+        <p>Daftar diurutkan berdasarkan karakteristik tersebut, sehingga node teratas adalah yang akan dipilih Monerujo
+        saat ini. Bagian bawah daftar akan menampilkan node yang sangat lambat atau tidak tersedia.</p>
+        <h2>Tambah Node</h2>
+        <p>Dengan menyentuh tombol &quot;Tambah Node&quot; di bagian bawah, Anda akan diminta untuk
+        memasukkan detail node pada dialog berikutnya.
+        &quot;Alamat&quot; adalah hostname atau alamat IP node - ini adalah satu-satunya
+        entri yang wajib diisi.
+        Masukkan &quot;Port&quot; jika node berjalan pada port non-default (misalnya 18089).
+        Anda juga dapat memberi nama node secara opsional agar lebih mudah dikenali di kemudian hari.
+        Beberapa node memerlukan kredensial untuk digunakan. Masukkan nama pengguna &amp;
+        kata sandi yang diberikan pada kolom yang sesuai. Sekarang Anda dapat melakukan &quot;Test&quot; pada pengaturan ini.
+        &quot;Test Results&quot; akan menampilkan blockheight, waktu respons, dan IP aktual yang digunakan.
+        Hasilnya juga dapat berupa kesalahan - biasanya karena hostname yang diberikan
+        tidak dapat dijangkau dalam waktu yang wajar atau kredensial yang dimasukkan salah.
+        Atau kombinasi hostname/port tidak mengarah ke Node Monero yang valid!
+        Setelah pengujian berhasil (tanpa kesalahan) - Anda dapat menekan &quot;OK&quot; untuk menyimpan &amp;
+        menandai node ini sebagai bookmark.</p>
+        <h2>Pindai Node</h2>
+        <p>Selain itu, Anda dapat memindai jaringan untuk mencari node. Monerujo akan mulai
+        memindai jaringan untuk Remote Node pada port 18089. Proses dimulai dengan meminta
+        node yang telah Anda tandai sebagai bookmark untuk memberikan peer lain di jaringan P2P Monero dan kemudian dilanjutkan
+        dengan meminta peer tersebut untuk memberikan peer mereka, dan seterusnya. Jika Anda tidak memiliki node yang ditandai sebagai bookmark
+        (atau mereka tidak memberikan informasi peer),
+        Monerujo akan langsung menggunakan seed node Monero yang telah ditanamkan secara bawaan. Proses
+        pemindaian berhenti setelah ditemukan total 10 remote node.</p>
+    ]]></string>
+    <string name="help_uri"><![CDATA[
+        <h1>Menggunakan tautan pembayaran</h1>
+        <p>Anda telah membuka Monerujo melalui tautan pembayaran. Untuk mengirim dana, silakan lakukan langkah berikut:</p>
+        <p>
+        1. Buka wallet yang ingin Anda gunakan untuk membayar<br>
+        2. Tunggu hingga wallet tersinkronisasi &amp; tombol "Give" muncul<br>
+        3. Tekan tombol "Give"
+        </p>
+        <p>Detail pembayaran akan terisi otomatis. Periksa kembali dan lanjutkan seperti pada transaksi lainnya.</p>
+    ]]></string>
+    <string name="help_ok">Mengerti!</string>
+    <string name="help_getorbot">Dapatkan Orbot!</string>
+    <string name="help_tor"><![CDATA[
+        <h1>Tor</h1>
+        <p>Tor, singkatan dari The Onion Router, adalah perangkat lunak gratis dan sumber terbuka untuk memungkinkan
+        komunikasi anonim.</p>
+        <p>Mengaktifkan Tor akan mengarahkan koneksi Anda melalui beberapa relay dan menyembunyikan alamat IP Anda
+        dari node. Perlu diingat bahwa ini lebih privat namun juga <b>lebih lambat</b>.</p>
+        <p>Untuk menggunakan Tor dengan Monerujo, Anda perlu menginstal Orbot di ponsel Anda. Setelah
+        menginstal Orbot, pastikan untuk mengaktifkannya dengan menekan ikon jaringan pada layar
+        daftar wallet.</p>
+        <p>Jika Anda mengalami masalah saat terhubung dengan Tor, coba dapatkan Identity baru di aplikasi Orbot (ikon
+        di kanan atas).</p>
+    ]]></string>
+    <string name="help_tor_enable"><![CDATA[
+        <h1>Node Tor</h1>
+        <p>Ini adalah node .onion. Untuk menggunakannya, Anda harus mengaktifkan mode Tor dengan menekan ikon
+        <img src="ic_network_clearnet"/> di bagian atas halaman Daftar Wallet.</p>
+    ]]></string>
+    <string name="help_sidekick"><![CDATA[
+        <h2>Menggunakan wallet sidekick Anda</h2>
+        Pastikan kedua ponsel terhubung melalui Bluetooth dan kedua aplikasi telah dibuka.
+
+        <h3>Pada sidekick:</h3>
+        Buka wallet pilihan Anda.
+
+        <h3>Pada monerujo:</h3>
+        Hubungkan ke sidekick.
+
+        Buka wallet yang sesuai dengan yang telah Anda buka di ponsel sidekick.
+
+        Gunakan seperti Anda menggunakan wallet biasa. Biarkan memindai untuk melihat transaksi masuk, membagikan alamat, atau mengirim monero. Jika aplikasi perlu melakukan sesuatu yang melibatkan kunci Anda, aplikasi akan meminta izin dari sidekick.
+
+        <h3>Pada sidekick:</h3>
+        Jika monerujo meminta izin, Anda akan melihat dialog yang menampilkan detail transaksi seperti jumlah dan biaya. Anda juga akan melihat dua opsi, yaitu TERIMA atau TOLAK. Pilih dengan bijak.
+
+        <h3>Pada monerujo:</h3>
+        Transaksi seharusnya sudah ditandatangani dan siap dikirim. Tekan untuk mengirimkannya.
+         <br/>
+    ]]></string>
+    <string name="help_nok">Hmm…</string>
+</resources>
