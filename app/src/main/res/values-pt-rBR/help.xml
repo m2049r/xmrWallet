@@ -119,7 +119,7 @@
         <h3>Backup</h3>
         <p>Faz uma cópia da carteira na pasta <tt>backups</tt> dentro de <tt>monerujo</tt>
         sobrescrevendo as cópias anteriores.</p>
-        <h3>arquivar</h3>
+        <h3>Arquivar</h3>
         <p>Faz um backup da carteira e a deleta logo em seguida. A cópia permanece na pasta <tt>backups</tt>.
         Se você não precisa mais do seu backup recomendamos que você delete o arquivo usando um aplicativo
         gerenciador de arquivos.</p>
@@ -189,16 +189,16 @@
         <h2>Adicionar um Nó</h2>
         <p>Ao tocar no botão &quot;Adicionar nó&quot; na parte inferior, você será solicitado a
         inserir os detalhes do nó no diálogo seguinte.
-        O &quot;Endereço do Host&quot; é o nome do host ou endereço IP do nó - esta é a única
+        O &quot;Endereço do servidor&quot; é o nome do servidor ou endereço IP do nó - esta é a única
         informação obrigatória.
         Digite a &quot;Porta&quot; se o nó for executado em uma porta não padrão (por exemplo, 18089).
         Você também pode, opcionalmente, dar um nome ao nó para facilitar sua identificação mais tarde.
         Alguns nós exigem credenciais para serem utilizados. Digite o nome de usuário e
         senha nos campos apropriados. Agora você pode &quot;testar&quot; essas configurações.
         Os &quot;Resultados dos Testes&quot; exibirão a altura do bloco, o tempo de resposta e o IP real usado.
-        O resultado também pode ser um erro - geralmente porque o nome do host fornecido
+        O resultado também pode ser um erro - geralmente porque o nome do servidor fornecido
         não pôde ser alcançado em um período de tempo razoável ou as credenciais estão incorretas.
-        Ou a combinação Nome do Host/Porta não aponta para um Nó Monero válido!
+        Ou a combinação Nome do servidor/Porta não aponta para um Nó Monero válido!
         Depois que o teste passar (sem erro), você poderá pressionar &quot;OK&quot; para salvar &amp;
         marcar este nó como favorito.</p>
         <h2>Escanear Nós</h2>

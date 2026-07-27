@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_create_new"><![CDATA[
+      <h1>Tworzenie portfela - dane</h1>
+      <p>Jeśli potrzebujesz nowego adresu Monero!</p>
+      <p>Wprowadź unikalną nazwę portfela i hasło.
+      Hasło służy do zabezpieczenia danych portfela na urządzeniu. Użyj silnego hasła -
+      a najlepiej hasła złożonego z Kiku słów.</p>
+      <h2>Zapisz swój Mnemonic Seed!</h2>
+      <p>Na następnym ekranie znajdziesz swój 25-wyrazowy \"Mnemonic Seed"\”.
+      To jedyne dane potrzebne do późniejszego odzyskania portfela
+      i uzyskania pełnego dostępu do środków.
+      Przechowywanie tych danych w bezpiecznym i prywatnym miejscu jest bardzo ważne, ponieważ daje <em>każdemu</em>
+      pełny dostęp do twoich środków!</p>
+      <p>Jeśli zapomnisz hasła do portfela, nadal możesz go odzyskać przy użyciu Mnemonic Seed.</p>
+      <p>Nie ma sposobu na odzyskanie Mnemonic Seed - jeśli go zgubisz, stracisz wszystkie środki!
+      Mnemonic Seed nie może zostać zmieniony. Jeśli zostanie skradziony lub w inny sposób ujawniony,
+      musisz przenieść środki do nowego portfela (z nowym Mnemonic Seedem). Dlatego najlepiej
+      zapisz Mnemonic Seed i przechowuj go w <em>kilku</em> 
+      bezpiecznych miejscach.</p>
+]]></string>
+    <string name="help_create_seed"><![CDATA[
+        <h1>Tworzenie portfela - seed</h1>
+        <p>Jeśli masz już adres Monero i chcesz odzyskać transakcje z blockchaina!</p>
+        <p>Wprowadź unikalną nazwę i hasło. Hasło służy do zabezpieczenia danych portfela na urządzeniu.
+        Użyj silnego hasła - a najlepiej hasła złożonego z kilku słów.</p>
+        <p>Wprowadź swój seed w polu \"Mnemonic Seed\".<p>
+        <p>Wprowadź numer bloku pierwsze transakcji użytej dla tego adresu w
+        polu \"Wysokość przywracania\". Możesz też użyć daty w formacie RRRR-MM-DD. Jeśli nie jesteś pewien,
+        podaj przybliżoną datę/wysokość bloku <em>przed</em> twoim pierwszym użyciem tego adresu portfela.</p>
+    ]]></string>
+    <string name="help_ok">Rozumiem!</string>
+    <string name="help_nok">Nie, dzięki…</string>
+    <string name="help_getorbot">Pobierz Orbot!</string>
+</resources>

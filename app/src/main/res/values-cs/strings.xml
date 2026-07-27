@@ -1,2 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="wallet_activity_name">Peněženka</string>
+    <string name="menu_about">O aplikaci</string>
+    <string name="menu_privacy">Ochrana Soukromí</string>
+    <string name="menu_share">Sdílet</string>
+    <string name="menu_help">Nápověda</string>
+    <string name="menu_receive">Příjmout</string>
+    <string name="menu_rename">Přejmenovat</string>
+    <string name="menu_delete">Odstranit</string>
+    <string name="menu_backup">Zálohovat</string>
+    <string name="menu_changepw">Změnit přístupovou frázi</string>
+    <string name="menu_back">Zpět</string>
+    <string name="menu_close">Zavřít</string>
+    <string name="menu_cancel">Zrušit</string>
+    <string name="password_weak">Nedostatečné heslo …</string>
+    <string name="password_fair">Velmi slabé heslo …</string>
+    <string name="password_good">Slabé heslo</string>
+    <string name="password_strong">Dostatečné heslo</string>
+    <string name="password_very_strong">Silné heslo</string>
+    <string name="label_login_wallets">Peněženky</string>
+    <string name="label_ok">Budiž</string>
+    <string name="label_cancel">Zrušit</string>
+    <string name="label_close">Zavřít</string>
+    <string name="label_wallet_advanced_details">Podrobné informace</string>
+    <string name="label_send_success">Úspěšně odesláno</string>
+    <string name="label_send_done">Hotovo</string>
+    <string name="label_receive_info_gen_qr_code">Generovat QR Code</string>
+    <string name="info_xmrto_enabled">XMR můžete převézt na jiné měny. Kliknutím zjistíte více.</string>
+    <string name="info_ledger_enabled">Ledger je aktivní. Kliknutím zjistíte více.</string>
+    <string name="info_xmrto"><![CDATA[
+
+        <b>Zadali jste %1$s adresu.</b><br/>
+        <i>Tato adresa tak získá %2$s prostřednictvím služby <b>%3$s</b>.</i>
+    ]]></string>
+    <string name="info_send_xmrto_success_order_label">%1$s Příkaz</string>
+    <string name="info_send_xmrto_paid">Čeká se na potvrzení</string>
+    <string name="info_send_xmrto_unpaid">Čeká se na platbu</string>
+    <string name="info_send_xmrto_error">%1$s Chyba (%2$s)</string>
+    <string name="info_send_xmrto_sent">%1$s Odesláno!</string>
+    <string name="info_send_xmrto_query">Vyčkává se …</string>
+    <string name="send_available_btc">Zůstatek: %1$s XMR (~%2$s %3$s)</string>
+    <string name="info_paymentid_integrated">✔ ID platby integrováno</string>
+    <string name="info_prepare_tx">Připravuje se Vaše transakce</string>
+    <string name="label_send_progress_xmrto_create">Vytváří se příkaz</string>
+    <string name="label_send_progress_xmrto_query">Dotazuje se na příkaz</string>
+    <string name="label_send_progress_create_tx">Připravuje se Monero transakce</string>
+    <string name="label_send_progress_queryparms">Dotazuje se na parametry</string>
+    <string name="label_generic_xmrto_error">CHYBA</string>
+    <string name="text_generic_xmrto_error">Kód: %1$d</string>
+    <string name="text_retry">Ťuknutím zopakujte</string>
+    <string name="text_noretry_monero">Zasekli jsme se :(</string>
+    <string name="text_noretry">A jéje... %1$s vypadá, že není momentalně dostupná!</string>
+    <string name="text_send_btc_rate">(Míra: %1$s %2$s/XMR)</string>
+    <string name="label_send_btc_xmrto_info">Navštivte %1$s stránku pro podporu a sledování</string>
+    <string name="label_send_btc_xmrto_key_lb">Číslo přikazu:\n%1$s</string>
+    <string name="label_send_btc_xmrto_key">Číslo příkazu: %1$s</string>
+    <string name="label_send_btc_address">Adresa doručení: %1$s</string>
+    <string name="label_send_btc_amount">Počet</string>
+    <string name="label_send_txid">ID transakce</string>
+    <string name="label_send_address">Adresa doručení</string>
+    <string name="label_send_notes">Poznámky</string>
+    <string name="backup_progress">Vytváří se záloha</string>
+    <string name="archive_progress">Vytváří se archiv</string>
+    <string name="rename_progress">Přejmenovává se</string>
+    <string name="changepw_progress">Mění se heslo</string>
+    <string name="service_progress">Vyčkejte prosím, toto může chvilku zabrat...</string>
+    <string name="backup_success">Záloha byla úspěšná</string>
+    <string name="backup_failed">Záloha selhala!</string>
+    <string name="delete_failed">Odstranění selhalo!</string>
+    <string name="rename_failed">Přejmenování selhalo!</string>
+    <string name="changepw_failed">Změná hesla selhala!</string>
+    <string name="changepw_success">Heslo změněno</string>
+    <string name="label_daemon">Síť</string>
+    <string name="status_wallet_loading">Načítá se peněženka …</string>
+    <string name="status_wallet_unloaded">Peněženka uložena</string>
+    <string name="status_wallet_unload_failed">Uložení peněženky selhalo!</string>
+    <string name="status_wallet_connecting">Připojování …</string>
+    <string name="status_wallet_connect_failed">Připojení k uzlu selhalo!\nZkontrolujte uživatelské jméno či heslo</string>
+    <string name="status_wallet_connect_wrongversion">Verze uzlu není kompatibilní! Prosím, aktualizujte tento uzel.</string>
+    <string name="status_wallet_node_invalid">Uzel není platný!\nZkuste jiný.</string>
+    <string name="status_wallet_connect_ioex">Není možné navázat spojení s uzlem!\nZkuste to později nebo zkuste jiný uzel.</string>
+    <string name="status_wallet_disconnected">Odpojeno</string>
+    <string name="status_transaction_failed">Transaction selhala: %1$s</string>
+    <string name="send_xmrto_timeout">Časový limit vypršel!</string>
+    <string name="service_busy">Stále se zpracovává předchozí peněženka …</string>
+    <string name="prompt_rename">Přejmenovat %1$s</string>
+    <string name="prompt_changepw">Nová bezpečnostní fráze pro %1$s</string>
+    <string name="prompt_changepwB">Zopakujte bezpečnostní frázi pro %1$s</string>
+    <string name="prompt_password">Heslo pro %1$s</string>
+    <string name="prompt_fingerprint_auth">Můžete otevírat peněženky pomocí otisku prstu.\nProsím, dotkněte se prstem senzoru.</string>
+    <string name="prompt_open_wallet">Otevírá se peněženka …</string>
+    <string name="bad_fingerprint">Otisk prstu nebyl rozpoznán. Zkuste to znovu.</string>
+    <string name="bad_password">Nesprávné heslo!</string>
+    <string name="bad_saved_password">Uložené heslo není správné.\nProsím, zadejte heslo manuálně.</string>
+    <string name="bad_wallet">Tato peněženka neexistuje!</string>
+    <string name="prompt_daemon_missing">Uzel musí být nastaven!</string>
+    <string name="prompt_wrong_net">Peněženka nesouhlasí s vybranou sítí</string>
+    <string name="label_wallet_receive">Přijmout</string>
+    <string name="label_wallet_send">Poslat</string>
+    <string name="xmr_unconfirmed_amount">+ %1$s %2$s nepotvrzeno</string>
+    <string name="service_description">Peněženka je otevřená</string>
+    <string name="status_synced">Synchronizováno:</string>
+    <string name="status_remaining">Zbývajicí bloky</string>
+    <string name="status_syncing">Synchronizuji:</string>
+    <string name="message_camera_not_permitted">Aplikace nemá povolený přístup ke kameře!</string>
+    <string name="label_copy_address">Veřejná adresa</string>
+    <string name="label_copy_xmrtokey">Klíč</string>
+    <string name="message_copy_viewkey">Zobrazovací klíč zkopírován do schránky!</string>
+    <string name="label_copy_viewkey">Zobrazovací Klíč</string>
+    <string name="message_copy_xmrtokey">Klíč zkopírován to schránky!</string>
+    <string name="message_copy_address">Adresa peněženky zkopírována do schránky!</string>
+    <string name="message_copy_txid">ID transakce zkopírováno do schránky!</string>
+    <string name="message_nocopy">Kopírování je zablokováno z bezpečnostních důvodů!</string>
+    <string name="message_exchange_failed">Nelze získat míru převodu!\nPoužijte XMR/XMR nebo to zkuste znovu</string>
+    <string name="generate_title">Vytvoření peněženky</string>
+    <string name="generate_name_hint">Jméno peněženky</string>
+    <string name="generate_password_hint">Bezpečnostní fráze pro peněženku</string>
+    <string name="generate_fingerprint_hint">Povolit otevírání peněženky otiskem prstu</string>
+    <string name="generate_fingerprint_warn"><![CDATA[
+        <strong>Autentikace Otiskem Prstu</strong>
+        <p>Při zapnuté autentikaci prostřednictvím otiskem prstu můžete zobrazovat Váš zůstatek a přijímat prostředky bez zadávání hesla</p>
+        <p>Monerujo bude však nadále z bespečnostních důvodů vyžadovat heslo pro zobrazování podrobností o peněžence a odesílaní prostředků.</p>
+        <strong>Bezpečnostní Varování</strong>
+        <p>Monerujo Vás tímto upozorňuje, že kdokoliv může ziskat otisk Vašeho prstu pro přístup k zůstatku Vaší peněženky.</p>
+        <p>Napřiklad může takto někdo kolem Vás otevřít Vaši peněženku během Vašeho spánku.</p>
+        <strong>Jste si jist, že chcete tuto funkci povolit?</strong>
+    ]]></string>
+    <string name="generate_bad_passwordB">Bezpečnostní fráze se neshoduje</string>
+    <string name="generate_empty_passwordB">Bezpečnostní fráze nemůže být prázdná</string>
+    <string name="generate_button_accept">Poznačil jsem si „mnemonic seed“</string>
+    <string name="generate_wallet_name">Pojmenovat</string>
+    <string name="generate_wallet_exists">Peněženka již existuje!</string>
+    <string name="generate_wallet_dot">Nemůže začínat tečkou (.)</string>
+    <string name="generate_wallet_creating">Vytváří se peněženka</string>
+    <string name="generate_wallet_created">Peněženka vytvořena</string>
+    <string name="generate_restoreheight_error">Zadejte číslo či datum (ve formátu YYYY-MM-DD)</string>
+    <string name="generate_wallet_type_key">Klíče</string>
+    <string name="generate_wallet_type_new">Nová</string>
+    <string name="generate_wallet_type_view">Zobrazit</string>
+    <string name="generate_wallet_type_seed">Seed</string>
+    <string name="generate_address_hint">Veřejná adresa</string>
+    <string name="generate_viewkey_hint">Zobrazit klíč</string>
+    <string name="generate_mnemonic_hint">25 slovní „mnemonic seed“</string>
+    <string name="generate_restoreheight_hint">Obnovit výšku či datum (ve formátu YYYY-MM-DD)</string>
+    <string name="generate_address_label">Veřejná adresa</string>
+    <string name="generate_viewkey_label">Zobrazit klíč</string>
+    <string name="generate_mnemonic_label">„Mnemonic Seed“</string>
+    <string name="generate_crazypass_label">Obnovovací heslo pro soubory peněženky</string>
+    <string name="generate_check_key">Zadejte platný klíč</string>
+    <string name="generate_check_address">Zadejte platnou adresu</string>
+</resources>

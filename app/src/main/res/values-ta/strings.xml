@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+<!ENTITY nbsp "&#160;">
+]>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:locale="ta">
     <string name="wallet_activity_name">பணப்பை</string>
     <string name="menu_about">எங்களைப் பற்றி</string>
@@ -10,11 +13,11 @@
     <string name="menu_delete">அழி</string>
     <string name="menu_backup">காப்புநகலெடு</string>
     <string name="menu_changepw">கடவுச்சொற்றொடரை மாற்று</string>
-    <string name="password_weak">தொடர்ந்து … ஐ தட்டச்சு செய்யவும்</string>
-    <string name="password_fair">…, இதை அடிப்பதற்கா இவ்வளவு நேரம்</string>
+    <string name="password_weak">தொடர்ந்து தட்டச்சு செய்…</string>
+    <string name="password_fair">ஒஓ…</string>
     <string name="password_good">இதைவிட சிறப்பாக உங்களால் செய்ய இயலும்!</string>
-    <string name="password_strong">… ஐ அடித்து நெருங்கி வந்துவிட்டீர்கள்</string>
-    <string name="password_very_strong">அருமை அருமை! இதல்லவா கடவுச்சொல்!</string>
+    <string name="password_strong">ஐயா அருமை…</string>
+    <string name="password_very_strong">அருமை, h4x0r பாணி!</string>
     <string name="label_login_wallets">பணப்பைகள்</string>
     <string name="label_credits">நன்றிகள்</string>
     <string name="label_ok">சரி</string>
@@ -36,7 +39,7 @@
     <string name="info_send_xmrto_unpaid">பணம் செலுத்தல் நிலுவையில் உள்ளது</string>
     <string name="info_send_xmrto_error">%1$s பிழை (%2$s)</string>
     <string name="info_send_xmrto_sent">%1$s அனுப்பப்பட்டது!</string>
-    <string name="info_send_xmrto_query">… ஐ வினவுகிறது</string>
+    <string name="info_send_xmrto_query">வினவுகிறது…</string>
     <string name="info_send_xmrto_parms"><![CDATA[
         <b>நீங்கள் %1$s &#8212; %2$s %4$s ஐ அனுப்பலாம்</b>.<br/>
         <i><b>%5$s</b> ஆனது <b>%3$s %4$s/XMR</b> என்னும் <u>இப்போதைய</u> மாற்று மதிப்பை உங்களுக்கு அளிக்கிறது</i>.
@@ -78,10 +81,10 @@
     <string name="changepw_failed">கடவுச்சொல் மாற்றம் தோல்வியடைந்தது!</string>
     <string name="changepw_success">கடவுச்சொல் மாற்றப்பட்டது</string>
     <string name="label_daemon">வலையமைப்பு</string>
-    <string name="status_wallet_loading">… பணப்பை ஏறுகிறது</string>
+    <string name="status_wallet_loading">பணப்பை ஏறுகிறது…</string>
     <string name="status_wallet_unloaded">பணப்பை சேமிக்கப்பட்டது</string>
     <string name="status_wallet_unload_failed">பணப்பை சேமித்தல் தோல்வியடைந்தது!</string>
-    <string name="status_wallet_connecting">… ஐ இணைக்கிறது</string>
+    <string name="status_wallet_connecting">இணைக்கிறது…</string>
     <string name="status_wallet_connect_failed">கணு இணைப்பு தோல்வியடைந்தது!\nபயனர்பெயர்/கடவுச்சொல்லை சரிபார்க்கவும்</string>
     <string name="status_wallet_connect_wrongversion">கணு பதிப்பு ஒத்துபோகவில்லை - தயவுசெய்து இற்றைப்படுத்தவும்!</string>
     <string name="status_wallet_node_invalid">செல்லாத கணு!\nமற்றொன்றை முயற்சிக்கவும்.</string>
@@ -89,13 +92,13 @@
     <string name="status_wallet_disconnected">துண்டிக்கப்பட்டது</string>
     <string name="status_transaction_failed">பரிமாற்றம் தோல்வியடைந்தது: %1$s</string>
     <string name="send_xmrto_timeout">நீங்கள் நீண்ட நேரமாக காத்திருக்கிறீர்கள், தோழரே!</string>
-    <string name="service_busy">நான் இன்னும் உங்கள் கடைசி … பணப்பையோடு அலுவலாக இருக்கிறேன்</string>
+    <string name="service_busy">நான் இன்னும் உங்கள் கடைசி பணப்பையோடு அலுவலாக இருக்கிறேன்…</string>
     <string name="prompt_rename">%1$s ஐ மறுபெயரிடவும்</string>
     <string name="prompt_changepw">%1$s ற்கான புதிய கடவுத்தொடர்</string>
     <string name="prompt_changepwB">%1$s ற்கான கடவுத்தொடரை மீண்டும் இடவும்</string>
     <string name="prompt_password">%1$s ற்கான கடவுத்தொடர்</string>
     <string name="prompt_fingerprint_auth">நீங்கள் விரல்பதிவை பயன்படுத்தியும் பணப்பையை திறக்கலாம்.\nஉணரியை தொடவும்.</string>
-    <string name="prompt_open_wallet">… பணப்பை திறக்கப்படுகிறது</string>
+    <string name="prompt_open_wallet">பணப்பை திறக்கப்படுகிறது…</string>
     <string name="bad_fingerprint">விரல்பதிவு அடையாளம் கண்டுகொள்ளப்படவில்லை. மீண்டும் முயலவும்.</string>
     <string name="bad_password">தவறான கடவுச்சொல்!</string>
     <string name="bad_saved_password">சேமிக்கப்பட்ட கடவுச்சொல் தவறாய் இருக்கிறது.\nதயவுசெய்து கடவுச்சொல்லை கைமுறையாக இடவும்.</string>
@@ -106,13 +109,13 @@
 
     <string name="label_watchonly">(காண மட்டும்)</string>
     <string name="label_wallet_receive">பெறு</string>
-    <string name="label_wallet_send">அனுப்பு</string>
+    <string name="label_wallet_send">கொடு</string>
     <string name="xmr_unconfirmed_amount">+ %1$s %2$s உறுதிப்படுத்தப்படவில்லை</string>
-    <string name="service_description">monerujo சேவை</string>
+    <string name="service_description">பணப்பை திறந்திருக்கிறது</string>
     <string name="status_synced">ஒத்திசைக்கப்பட்டது:</string>
     <string name="status_remaining">மீதமுள்ள தொகுதிகள்</string>
     <string name="status_syncing">வருடுகிறது:</string>
-    <string name="message_camera_not_permitted">படமி இல்லையென்றால் QR வருடலும் இல்லை</string>
+    <string name="message_camera_not_permitted">படமி இல்லையென்றால் QR வருடலும் இல்லை!</string>
     <string name="label_copy_viewkey">பார்வை திறவுகோல்</string>
     <string name="label_copy_address">பொது முகவரி</string>
     <string name="label_copy_xmrtokey">திறவுகோல்</string>
@@ -130,14 +133,13 @@
         <strong>விரல்பதிவு சான்றளிப்பு</strong>
         <p>விரல்பதிவு சான்றளிப்பை செயல்படுத்துவதன் மூலம் உங்களால், கடவுச்சொல்லை இடாமலேயே பணப்பை இருப்பை பார்க்கவும்,
         பணத்தை பெறவும் இயலும்.</p>
-        <p>இருப்பினும் கூடுதல் பாதுகாப்பிற்காக, பணப்பை விவரங்களை பார்க்கும்போதும் அல்லது பணத்தை அனுப்பும்போதும் 
+        <p>இருப்பினும் கூடுதல் பாதுகாப்பிற்காக, பணப்பை விவரங்களைப் பார்க்கும்போதும் அல்லது பணத்தை அனுப்பும்போதும் 
         monerujo உங்களிடம் கடவுச்சொல்லை கேட்கும்.</p>
         <strong>பாதுகாப்பு எச்சரிக்கை</strong>
         <p>இறுதியாக, உங்கள் விரல்பதிவை பெறவல்ல ஒருவரால் உங்கள் பணப்பை இருப்பினுள் எட்டி பார்க்க முடியும் 
         என்பதை monerujo உங்களுக்கு நினைவு கூற விரும்புகிறது.</p>
-        <p>எடுத்துக்காட்டாக, தீயநோக்குடைய ஒரு பயனரால் நீங்கள் உறக்கத்தில் இருக்கும்போது உங்களுக்கு தெரியாமல் இந்த
-        பணப்பையை திறந்து பார்க்க வாய்ப்புள்ளது.</p>
-        <strong>இந்த செயல்பாட்டை செயல்படுத்த நீங்கள் உறுதியாக உள்ளீர்களா?</strong>
+        <p>எடுத்துக்காட்டாக, தீயநோக்குடைய ஒரு பயனரால் நீங்கள் உறக்கத்தில் இருக்கும்போது உங்களுக்குத் தெரியாமல் இந்தப் பணப்பையை திறந்து பார்க்க வாய்ப்புள்ளது.</p>
+        <strong>இந்தச் செயல்பாட்டைச் செயல்படுத்த நீங்கள் உறுதியாக உள்ளீர்களா?</strong>
     ]]></string>
     <string name="generate_bad_passwordB">கடவுத்தொடர் ஒத்துப்போகவில்லை</string>
     <string name="generate_empty_passwordB">கடவுத்தொடர் காலியாக இருக்காது</string>
@@ -188,14 +190,14 @@
     <string name="send_fee_label">கட்டணம்</string>
     <string name="send_total_btc_label">மொத்தம் (XMR)</string>
     <string name="send_total_label">மொத்தம்</string>
-    <string name="send_amount">%1$s XMR</string>
+    <string name="send_amount" translatable="false">%1$s XMR</string>
     <string name="send_fee">+%1$s கட்டணம்</string>
     <string name="send_create_tx_error_title">பரிமாற்ற உருவாக்கல் பிழை</string>
     <string name="tx_list_fee">கட்டணம் %1$s</string>
-    <string name="tx_list_amount_failed">(%1$s)</string>
+    <string name="tx_list_amount_failed" translatable="false">(%1$s)</string>
     <string name="tx_list_failed_text">தோல்வியடைந்தது</string>
-    <string name="tx_list_amount_negative">- %1$s</string>
-    <string name="tx_list_amount_positive">+ %1$s</string>
+    <string name="tx_list_amount_negative" translatable="false">- %1$s</string>
+    <string name="tx_list_amount_positive" translatable="false">+ %1$s</string>
     <string name="tx_timestamp">நேரமுத்திரை</string>
     <string name="tx_id">டிஎக்ச் ஐடி</string>
     <string name="tx_key">TX திறவுகோல்</string>
@@ -252,7 +254,7 @@
     <string name="node_height">கடைசி தொகுதி இற்றைப்படுத்தப்பட்டது: %1$s</string>
     <string name="label_nodes">கணுக்கள்</string>
     <string name="node_name_hint">கணு பெயர் (விரும்பினால்)</string>
-    <string name="node_address_hint">புரவலன் பெயர்</string>
+    <string name="node_address_hint">புரவலன் பெயர் அல்லது ஐபி</string>
     <string name="node_port_hint">துறை</string>
     <string name="node_user_hint">பயனர்பெயர் (விரும்பினால்)</string>
     <string name="node_pass_hint">கடவுச்சொல் (விரும்பினால்)</string>
@@ -294,7 +296,7 @@
     <string name="onboarding_seed_title">விதையை பாதுகாப்பாக வைக்கவும்</string>
     <string name="onboarding_seed_information">இந்த விதை அதை வைத்திருப்பவருக்கு முழு அணுகலை வழங்குகிறது. இதை நீங்கள் துலைத்து விட்டால், இதை மீட்க எங்களால் உங்களுக்கு உதவ இயலாது. உங்கள் மனம் கவர்ந்த மொனேரொக்களை இழக்க நேரிடும்.</string>
     <string name="onboarding_xmrto_title">கிரிப்டோவை அனுப்பவும்</string>
-    <string name="onboarding_xmrto_information">Monerujo இனுள் exchange க்கான ஆதரவு உட்பொதிந்துள்ளது. வெறும் BTC, LTC, ETH, TRXUSDT அல்லது SOL க்கான முகவரியை ஒட்டுவதன் மூலம் அல்லது வருடுவதன் மூலம் உங்களால் XMR ஐ செலவழித்து இந்தவகை கிரிப்டோக்களாக அனுப்ப இயலும்.</string>
+    <string name="onboarding_xmrto_information">மோனெருஜோவில் உள்ளமைக்கப்பட்ட பரிமாற்றங்களுக்கான ஆதரவு உள்ளது. நீங்கள் பல கிரிப்டோக்களில் பணம் செலுத்த XMR ஐப் பயன்படுத்தலாம்.</string>
     <string name="onboarding_nodes_title">கணுக்கள், இது உங்கள் வழி</string>
     <string name="onboarding_nodes_information">கணுக்கள் உங்களை மொனேரொ வலையமைப்போடு இணைக்கிறது. பொது கணுக்களை பயன்படுத்துகிறீர்களா அல்லது முழுவதுமாக உங்கள் சொந்த கணுவை பயன்படுத்த போகிறீர்களா என்பதை முடிவு செய்யவும்.</string>
     <string name="onboarding_fpsend_title">விரல்பதிவை கொண்டு அனுப்பவும்</string>
@@ -338,8 +340,8 @@
     <string name="menu_deletecache">பணப்பையை மீள் அமைக்கவும்!</string>
     <string name="deletecache_alert_message">இந்த பணப்பை எல்லா அணைவரி-சங்கிலி தரவுகளும் (குறிப்புகள், கணக்கு &amp; துணை முகவரி பெயர்கள், தனியார் பரிமாற்ற திறவுகோல்கள் போன்றவை …) அழிக்கப்பட்டு மீள் அமைக்கப்படும்! பணப்பை பழுதடைந்தாலோ, அல்லது ஏறவில்லை என்றால் மட்டுமே இதை பயன்படுத்தவும்!</string>
     <string name="node_tor_error">Tor தேவைப்படுகிறது</string>
-    <string name="node_waiting">\u00A0கணுவிற்காக காத்திருக்கிறது\u00A0</string>
-    <string name="tor_enable_background">Tor ஐ பயன்படுத்தவும் Orbot அமைப்பில் உள்ள "பின்னனி துவக்கத்தை அனுமதிக்கவும்"!</string>
+    <string name="node_waiting"> கணுவிற்காக காத்திருக்கிறது </string>
+    <string name="tor_enable_background">Tor ஐ பயன்படுத்தவும் Orbot அமைப்பில் உள்ள பின்னனி துவக்கத்தை அனுமதிக்கவும்!</string>
     <string name="tor_noshift">%1$s ஆனது Tor ஐ ஆதரிப்பதில்லை.\nXMR ஐ இடமாற்ற Tor ஐ முடக்கவும்.</string>
     <string name="label_seed_offset_encrypt">விதை மறையீடு (சோதனைவழி)</string>
     <string name="seed_offset_hint">விதை ஈடுசெய் சொற்றொடர் (விரும்பினால்)</string>
@@ -358,9 +360,9 @@
     <string name="subaddress_add">துணைப்பிரிவைச் சேர்க்கவும்</string>
     <string name="bluetooth_permissions_ok">சரி</string>
     <string name="menu_close">மூடு</string>
-    <string name="pocketchange_info">மீண்டும் மீண்டும் செலவழிக்க காத்திருக்கும் நேரத்தைக் குறைக்க, அதிக கட்டணங்களின் இழப்பில் மோனெருசோ உதிரி மாற்றத்தை உருவாக்க முடியும். இது தேர்ந்தெடுக்கப்பட்ட தொகையில் குறைந்தது 6 நாணயங்களை உருவாக்கி பராமரிக்க முயற்சிக்கும்.</string>
+    <string name="pocketchange_info">மறுநிகழும் செலவழிக்க காத்திருக்கும் நேரத்தைக் குறைக்க, அதிக கட்டணங்களின் இழப்பில் மோனெருசோ உதிரி மாற்றத்தை உருவாக்க முடியும். இது தேர்ந்தெடுக்கப்பட்ட தொகையில் குறைந்தது 6 நாணயங்களை உருவாக்கிப் பராமரிக்க முயற்சிக்கும்.</string>
     <string name="message_qr_failed">பகிர்வதற்கு QR ஐ உருவாக்கத் தவறிவிட்டது!</string>
-    <string name="tx_locked">பரிவர்த்தனை தொகை தொகுதி %1$d வரை பூட்டப்பட்டுள்ளது ( %2$d தொகுதிகள் ≈ %3 $, 2f நாட்கள்)</string>
+    <string name="tx_locked">பரிவர்த்தனை தொகை தொகுதி %1$d வரை பூட்டப்பட்டுள்ளது (%2$d தொகுதிகள் ≈ %3$,.2f நாட்கள்)</string>
     <string name="setting_theme">சூல் தண்டு</string>
     <string name="menu_cancel">ரத்துசெய்</string>
     <string name="title_info">தகவல்</string>
@@ -378,4 +380,5 @@
     <string name="bluetooth_select_label">பக்கவாட்டு சாதனத்தைத் தேர்ந்தெடுக்கவும்</string>
     <string name="fab_restore_sidekick">பக்கவாட்டிலிருந்து மீட்டமைக்கவும்</string>
     <string name="setting_stickyfiat">ஒட்டும் ஃபியட்</string>
+    <string name="node_use_ssl">பாஓடு பயன்படுத்து</string>
 </resources>

@@ -99,7 +99,7 @@
     <string name="label_wallet_receive">Получить</string>
     <string name="label_wallet_send">Передать</string>
     <string name="xmr_unconfirmed_amount">+ %1$s %2$s не подтверждено</string>
-    <string name="service_description">Служба Monerujo</string>
+    <string name="service_description">Кошелек открыт</string>
     <string name="status_synced">Синхронизировано:</string>
     <string name="status_remaining">Блоков осталось</string>
     <string name="status_syncing">Просканировано:</string>
@@ -174,14 +174,14 @@
     <string name="send_fee_label">Комиссия</string>
     <string name="send_total_btc_label">Всего (XMR)</string>
     <string name="send_total_label">Всего</string>
-    <string name="send_amount">%1$s XMR</string>
+    <string name="send_amount" translatable="false">%1$s XMR</string>
     <string name="send_fee">+%1$s Комиссия</string>
     <string name="send_create_tx_error_title">Ошибка создания транзакции</string>
     <string name="tx_list_fee">Комиссия %1$s</string>
-    <string name="tx_list_amount_failed">(%1$s)</string>
+    <string name="tx_list_amount_failed" translatable="false">(%1$s)</string>
     <string name="tx_list_failed_text">Не удалось</string>
-    <string name="tx_list_amount_negative">- %1$s</string>
-    <string name="tx_list_amount_positive">+ %1$s</string>
+    <string name="tx_list_amount_negative" translatable="false">- %1$s</string>
+    <string name="tx_list_amount_positive" translatable="false">+ %1$s</string>
     <string name="tx_timestamp">Отметка времени</string>
     <string name="tx_id">TX ID</string>
     <string name="tx_key">Ключ TX</string>
@@ -244,7 +244,7 @@
     <string name="node_height">Последний блок: %1$s</string>
     <string name="label_nodes">Узлы</string>
     <string name="node_name_hint">Имя узла (необязательно)</string>
-    <string name="node_address_hint">Имя хоста</string>
+    <string name="node_address_hint">Имя хоста или IP-адрес</string>
     <string name="node_port_hint">Порт</string>
     <string name="node_user_hint">Имя пользователя (необязательно)</string>
     <string name="node_pass_hint">Пароль (необязательно)</string>
@@ -292,7 +292,7 @@
     <string name="onboarding_seed_title">Храните свои ключи в безопасности</string>
     <string name="onboarding_seed_information">Секретная фраза дает полный доступ к кошельку. Если вы её потеряете, мы не сможем её восстановить и вы потеряете ваши moneroj.</string>
     <string name="onboarding_xmrto_title">Отправка других криптовалют</string>
-    <string name="onboarding_xmrto_information">Monerujo имеет поддержку exchange. Просто вставьте (или просканируйте) адрес BTC, LTC, ETH, TRXUSDT или SOL и вы будете отправлять эти криптовалюты, тратя XMR.</string>
+    <string name="onboarding_xmrto_information">В Monerujo встроена поддержка бирж. Вы можете использовать XMR для оплаты несколькими другими криптовалютами.</string>
     <string name="onboarding_nodes_title">Узлы, по вашему</string>
     <string name="onboarding_nodes_information">Узлы позволяют подключаться к сети Monero. Выбирайте между общедоступными узлами или используйте свой собственный для безопасности IP адреса.</string>
     <string name="onboarding_fpsend_title">Отправка с помощью отпечатка пальца</string>
@@ -339,8 +339,8 @@
     <string name="menu_deletecache">Сбросить кошелёк!</string>
     <string name="deletecache_alert_message">Этот кошелёк будет сброшен, потеряв всю локальную информацию (например: заметки, имена адресов, приватные ключи транзакций, …)! Используйте это ТОЛЬКО если кошелёк повреждён и не загружается!</string>
     <string name="node_tor_error">Необходим Tor</string>
-    <string name="node_waiting">\u00A0ОЖИДАНИЕ УЗЛА\u00A0</string>
-    <string name="tor_enable_background">Необходимо выбрать "Allow Background Starts" в настройках Orbot для использования Tor!</string>
+    <string name="node_waiting"> ОЖИДАНИЕ УЗЛА </string>
+    <string name="tor_enable_background">Необходимо выбрать Allow Background Starts в настройках Orbot для использования Tor!</string>
     <string name="tor_noshift">%1$s не поддерживает Tor.\nОтключите Tor для обмена XMR.</string>
     <string name="label_seed_offset_encrypt">Шифрование фразы (ЭКСПЕРЕМЕНТАЛЬНО)</string>
     <string name="seed_offset_hint">Смещение сид-фразы (необязательно)</string>
@@ -385,4 +385,5 @@
     <string name="bluetooth_permissions_cancel">Отменить</string>
     <string name="sidekick_pin">ПИН: %1$s</string>
     <string name="open_wallet_sidekick_missing">Пожалуйста, подключите устройство Sidekick</string>
+    <string name="node_use_ssl">Использовать SSL</string>
 </resources>
